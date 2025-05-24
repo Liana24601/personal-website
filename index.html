@@ -13,6 +13,8 @@
       color: #4d3e4d;
       margin: 0;
       padding: 0;
+      position: relative;
+      overflow-x: hidden;
     }
 
     header {
@@ -44,6 +46,8 @@
       padding: 2rem;
       max-width: 800px;
       margin: auto;
+      position: relative;
+      z-index: 2;
     }
 
     section {
@@ -77,6 +81,40 @@
       background-color: #fdfaff;
     }
 
+    .music-section {
+      background-color: #fff0ff;
+      border: 2px dashed #d4a8e7;
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+
+    .album {
+      margin-bottom: 2rem;
+    }
+
+    .album img {
+      width: 180px;
+      border: 3px solid #c69ddc;
+      border-radius: 8px;
+      margin-bottom: 0.5rem;
+    }
+
+    .album h3 {
+      margin: 0.5rem 0 0.2rem;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.6rem;
+      color: #944eb6;
+    }
+
+    .album ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .album ul li {
+      color: #5e3a70;
+    }
+
     footer {
       text-align: center;
       background-color: #ebd8f7;
@@ -98,52 +136,34 @@
       color: #b265d1;
     }
 
-    /* Lavender Decorations */
-    .lavender {
+    /* Sparkle Decorations */
+    .sparkle {
       position: fixed;
-      width: 100px;
-      opacity: 0.3;
-      pointer-events: none;
+      width: 120px;
       z-index: 1;
+      pointer-events: none;
+      opacity: 0.5;
     }
 
-    .lavender.top-left {
-      top: 10px;
-      left: 10px;
-      transform: rotate(-15deg);
-    }
-
-    .lavender.top-right {
-      top: 10px;
-      right: 10px;
-      transform: rotate(15deg);
-    }
-
-    .lavender.bottom-left {
-      bottom: 10px;
-      left: 10px;
-      transform: rotate(10deg);
-    }
-
-    .lavender.bottom-right {
-      bottom: 10px;
-      right: 10px;
-      transform: rotate(-10deg);
-    }
+    .sparkle.tl { top: 0; left: 0; }
+    .sparkle.tr { top: 0; right: 0; transform: scaleX(-1); }
+    .sparkle.bl { bottom: 0; left: 0; transform: scaleY(-1); }
+    .sparkle.br { bottom: 0; right: 0; transform: scaleX(-1) scaleY(-1); }
   </style>
 </head>
 <body>
-  <!-- Lavender Decorations -->
-  <img src="https://www.rawpixel.com/image/16590104/png-lavender-branch-lavender-illustration-botanical" alt="Lavender" class="lavender top-left">
-  <img src="https://www.rawpixel.com/image/16590104/png-lavender-branch-lavender-illustration-botanical" alt="Lavender" class="lavender top-right">
-  <img src="https://www.rawpixel.com/image/16590104/png-lavender-branch-lavender-illustration-botanical" alt="Lavender" class="lavender bottom-left">
-  <img src="https://www.rawpixel.com/image/16590104/png-lavender-branch-lavender-illustration-botanical" alt="Lavender" class="lavender bottom-right">
+  <!-- ✨ Sparkle GIFs -->
+  <img src="https://i.gifer.com/origin/71/71b580460d2c1ef1c7be321abe730dac.gif" class="sparkle tl" alt="sparkles">
+  <img src="https://i.gifer.com/origin/71/71b580460d2c1ef1c7be321abe730dac.gif" class="sparkle tr" alt="sparkles">
+  <img src="https://i.gifer.com/origin/71/71b580460d2c1ef1c7be321abe730dac.gif" class="sparkle bl" alt="sparkles">
+  <img src="https://i.gifer.com/origin/71/71b580460d2c1ef1c7be321abe730dac.gif" class="sparkle br" alt="sparkles">
 
   <header>
     <h1>My Cozy Corner</h1>
     <nav>
       <a href="#blog">Blog</a>
       <a href="#gallery">Art & Books</a>
+      <a href="#music">Albums</a>
       <a href="#socials">Socials</a>
     </nav>
   </header>
@@ -172,6 +192,18 @@
         <img src="https://via.placeholder.com/180x240.png?text=Book+2" alt="Book 2" />
         <img src="https://via.placeholder.com/180x240.png?text=Art+1" alt="Art 1" />
         <img src="https://via.placeholder.com/180x240.png?text=Art+2" alt="Art 2" />
+      </div>
+    </section>
+
+    <section id="music" class="music-section">
+      <h2>🎧 Albums & Music</h2>
+      <div class="album">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/84/Taylor_Swift_-_Midnights.png" alt="Midnights album cover">
+        <h3>Midnights – Taylor Swift</h3>
+        <ul>
+          <li>Midnight Rain</li>
+          <li>You’re On Your Own, Kid</li>
+        </ul>
       </div>
     </section>
 
