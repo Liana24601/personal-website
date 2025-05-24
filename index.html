@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Cozy Corner</title>
+  <style>
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #fdf6f0;
+      color: #4d3e3e;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ffe8ec;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 4px dashed #e3c7c7;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      font-family: 'Press Start 2P', cursive;
+      color: #cc5b70;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 0.5rem;
+      color: #cc5b70;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .blog-post {
+      background-color: #fffdf8;
+      border: 2px dashed #dcbaba;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .blog-post h2 {
+      margin-top: 0;
+      color: #b15d66;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border: 3px dotted #ddb6c6;
+      border-radius: 8px;
+      image-rendering: pixelated;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #ffe8ec;
+      padding: 1rem;
+      font-size: 0.9rem;
+      border-top: 4px dashed #e3c7c7;
+    }
+
+    .socials a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #a54e65;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Cozy Corner</h1>
+    <nav>
+      <a href="#blog">Blog</a>
+      <a href="#gallery">Art & Books</a>
+      <a href="#socials">Socials</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="blog">
+      <h2>📚 Latest Blog Posts</h2>
+      <div class="blog-post">
+        <h2>Review: *The Secret Garden*</h2>
+        <p>
+          This classic filled my heart like a cup of warm tea. The way the garden transforms as Mary grows felt magical. 🌱
+        </p>
+      </div>
+      <div class="blog-post">
+        <h2>Thoughts on *Coraline*</h2>
+        <p>
+          Spooky, eerie, and deliciously creepy. Neil Gaiman never misses — and the buttons? Never looking at them the same again. 🕷️
+        </p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>🎨 My Art & Book Photos</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/180x240.png?text=Book+1" alt="Book 1" />
+        <img src="https://via.placeholder.com/180x240.png?text=Book+2" alt="Book 2" />
+        <img src="https://via.placeholder.com/180x240.png?text=Art+1" alt="Art 1" />
+        <img src="https://via.placeholder.com/180x240.png?text=Art+2" alt="Art 2" />
+      </div>
+    </section>
+
+    <section id="socials">
+      <h2>🌐 Let's Connect</h2>
+      <div class="socials">
+        <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+        <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 My Cozy Corner. Brewed with love and pastel pixels. ☕</p>
+  </footer>
+</body>
+</html>
