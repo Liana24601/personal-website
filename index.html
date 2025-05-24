@@ -5,14 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Cozy Corner</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
 
     body {
-      font-family: 'Courier New', monospace;
-      background-color: #f4ebfa; /* soft lavender */
+      font-family: 'Quicksand', sans-serif;
+      background-color: #f4ebfa;
       color: #4d3e4d;
       margin: 0;
       padding: 0;
+      position: relative;
+      overflow-x: hidden;
     }
 
     header {
@@ -20,13 +22,14 @@
       text-align: center;
       padding: 2rem 1rem;
       border-bottom: 4px dashed #c6a3d4;
+      position: relative;
     }
 
     header h1 {
       font-size: 3rem;
       margin: 0;
-      font-family: 'Dancing Script', cursive;
-      color: #944eb6; /* pretty purple */
+      font-weight: 700;
+      color: #944eb6;
     }
 
     nav {
@@ -50,6 +53,11 @@
       margin-bottom: 3rem;
     }
 
+    section h2 {
+      font-size: 1.8rem;
+      color: #b265d1;
+    }
+
     .blog-post {
       background-color: #fff8ff;
       border: 2px dashed #d7b1e6;
@@ -60,7 +68,7 @@
     .blog-post h2 {
       margin-top: 0;
       color: #944eb6;
-      font-family: 'Dancing Script', cursive;
+      font-size: 1.4rem;
     }
 
     .gallery {
@@ -84,6 +92,7 @@
       font-size: 0.9rem;
       border-top: 4px dashed #c6a3d4;
       color: #6f3e8f;
+      position: relative;
     }
 
     .socials a {
@@ -92,14 +101,47 @@
       color: #8d4aa1;
     }
 
-    section h2 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.8rem;
-      color: #b265d1;
+    /* Lavender Decorations */
+    .lavender {
+      position: absolute;
+      width: 100px;
+      opacity: 0.3;
+      pointer-events: none;
+    }
+
+    .lavender.top-left {
+      top: 0;
+      left: 0;
+      transform: rotate(-20deg);
+    }
+
+    .lavender.top-right {
+      top: 0;
+      right: 0;
+      transform: rotate(20deg);
+    }
+
+    .lavender.bottom-left {
+      bottom: 0;
+      left: 0;
+      transform: rotate(10deg);
+    }
+
+    .lavender.bottom-right {
+      bottom: 0;
+      right: 0;
+      transform: rotate(-10deg);
     }
   </style>
 </head>
 <body>
+
+  <!-- Lavender Decorations -->
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Lavender_illustration.png" alt="Lavender" class="lavender top-left">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Lavender_illustration.png" alt="Lavender" class="lavender top-right">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Lavender_illustration.png" alt="Lavender" class="lavender bottom-left">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Lavender_illustration.png" alt="Lavender" class="lavender bottom-right">
+
   <header>
     <h1>My Cozy Corner</h1>
     <nav>
