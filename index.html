@@ -1,195 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Cozy Corner</title>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@500&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Cozy Corner</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
 
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background-color: #f4ebfa;
-      color: #4d3e4d;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      overflow-x: hidden;
-    }
+    body {
+      font-family: 'Courier New', monospace;
+      background-color: #f4ebfa; /* soft lavender */
+      color: #4d3e4d;
+      margin: 0;
+      padding: 0;
+    }
 
-    header {
-      background-color: #ebd8f7;
-      text-align: center;
-      padding: 2rem 1rem;
-      border-bottom: 4px dashed #c6a3d4;
-      position: relative;
-    }
+    header {
+      background-color: #ebd8f7;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-bottom: 4px dashed #c6a3d4;
+    }
 
-    header h1 {
-      font-family: 'Dancing Script', cursive;
-      font-size: 3.5rem;
-      margin: 0;
-      color: #944eb6;
-    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      color: #944eb6; /* pretty purple */
+    }
 
-    nav {
-      margin-top: 1rem;
-    }
+    nav {
+      margin-top: 1rem;
+    }
 
-    nav a {
-      margin: 0 0.5rem;
-      color: #a157c5;
-      text-decoration: none;
-      font-weight: bold;
-    }
+    nav a {
+      margin: 0 0.5rem;
+      color: #a157c5;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-    main {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
-    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
 
-    section {
-      margin-bottom: 3rem;
-    }
+    section {
+      margin-bottom: 3rem;
+    }
 
-    section h2 {
-      font-size: 1.8rem;
-      color: #b265d1;
-    }
+    .blog-post {
+      background-color: #fff8ff;
+      border: 2px dashed #d7b1e6;
+      padding: 1rem;
+      margin-bottom: 2rem;
+    }
 
-    .blog-post {
-      background-color: #fff8ff;
-      border: 2px dashed #d7b1e6;
-      padding: 1rem;
-      margin-bottom: 2rem;
-    }
+    .blog-post h2 {
+      margin-top: 0;
+      color: #944eb6;
+      font-family: 'Dancing Script', cursive;
+    }
 
-    .blog-post h2 {
-      margin-top: 0;
-      color: #944eb6;
-      font-size: 1.4rem;
-    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+      gap: 1rem;
+    }
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-      gap: 1rem;
-    }
+    .gallery img {
+      width: 100%;
+      border: 3px dotted #d1a9eb;
+      border-radius: 8px;
+      image-rendering: pixelated;
+      background-color: #fdfaff;
+    }
 
-    .gallery img {
-      width: 100%;
-      border: 3px dotted #d1a9eb;
-      border-radius: 8px;
-      image-rendering: pixelated;
-      background-color: #fdfaff;
-    }
+    footer {
+      text-align: center;
+      background-color: #ebd8f7;
+      padding: 1rem;
+      font-size: 0.9rem;
+      border-top: 4px dashed #c6a3d4;
+      color: #6f3e8f;
+    }
 
-    footer {
-      text-align: center;
-      background-color: #ebd8f7;
-      padding: 1rem;
-      font-size: 0.9rem;
-      border-top: 4px dashed #c6a3d4;
-      color: #6f3e8f;
-      position: relative;
-    }
+    .socials a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #8d4aa1;
+    }
 
-    .socials a {
-      margin: 0 0.5rem;
-      text-decoration: none;
-      color: #8d4aa1;
-    }
-
-    /* Lavender Decorations */
-    .lavender {
-      position: absolute;
-      width: 100px;
-      opacity: 0.3;
-      pointer-events: none;
-    }
-
-    .lavender.top-left {
-      top: 0;
-      left: 0;
-      transform: rotate(-20deg);
-    }
-
-    .lavender.top-right {
-      top: 0;
-      right: 0;
-      transform: rotate(20deg);
-    }
-
-    .lavender.bottom-left {
-      bottom: 0;
-      left: 0;
-      transform: rotate(10deg);
-    }
-
-    .lavender.bottom-right {
-      bottom: 0;
-      right: 0;
-      transform: rotate(-10deg);
-    }
-  </style>
+    section h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.8rem;
+      color: #b265d1;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>My Cozy Corner</h1>
+    <nav>
+      <a href="#blog">Blog</a>
+      <a href="#gallery">Art & Books</a>
+      <a href="#socials">Socials</a>
+    </nav>
+  </header>
 
-  <!-- Lavender Decorations -->
-  <img src="https://i.imgur.com/8KX8Lfa.png" alt="Lavender" class="lavender top-left">
-  <img src="https://i.imgur.com/8KX8Lfa.png" alt="Lavender" class="lavender top-right">
-  <img src="https://i.imgur.com/8KX8Lfa.png" alt="Lavender" class="lavender bottom-left">
-  <img src="https://i.imgur.com/8KX8Lfa.png" alt="Lavender" class="lavender bottom-right">
+  <main>
+    <section id="blog">
+      <h2> Latest Blog Posts</h2>
+      <div class="blog-post">
+        <h2>Review: *The Secret Garden*</h2>
+        <p>
+          This classic filled my heart like a cup of warm tea. The way the garden transforms as Mary grows felt magical. 
+        </p>
+      </div>
+      <div class="blog-post">
+        <h2>Thoughts on *Coraline*</h2>
+        <p>
+          Spooky, eerie, and deliciously creepy. Neil Gaiman never misses — and the buttons? Never looking at them the same again. 
+        </p>
+      </div>
+    </section>
 
-  <header>
-    <h1>My Cozy Corner</h1>
-    <nav>
-      <a href="#blog">Blog</a>
-      <a href="#gallery">Art & Books</a>
-      <a href="#socials">Socials</a>
-    </nav>
-  </header>
+    <section id="gallery">
+      <h2> My Art & Book Photos</h2>
+      <div class="gallery">
+        <img src="https://via.placeholder.com/180x240.png?text=Book+1" alt="Book 1" />
+        <img src="https://via.placeholder.com/180x240.png?text=Book+2" alt="Book 2" />
+        <img src="https://via.placeholder.com/180x240.png?text=Art+1" alt="Art 1" />
+        <img src="https://via.placeholder.com/180x240.png?text=Art+2" alt="Art 2" />
+      </div>
+    </section>
 
-  <main>
-    <section id="blog">
-      <h2>📚 Latest Blog Posts</h2>
-      <div class="blog-post">
-        <h2>Review: *The Secret Garden*</h2>
-        <p>
-          This classic filled my heart like a cup of warm tea. The way the garden transforms as Mary grows felt magical. 🌱
-        </p>
-      </div>
-      <div class="blog-post">
-        <h2>Thoughts on *Coraline*</h2>
-        <p>
-          Spooky, eerie, and deliciously creepy. Neil Gaiman never misses — and the buttons? Never looking at them the same again. 🕷️
-        </p>
-      </div>
-    </section>
+    <section id="socials">
+      <h2> Let's Connect</h2>
+      <div class="socials">
+        <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
+        <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+      </div>
+    </section>
+  </main>
 
-    <section id="gallery">
-      <h2>🎨 My Art & Book Photos</h2>
-      <div class="gallery">
-        <img src="https://via.placeholder.com/180x240.png?text=Book+1" alt="Book 1" />
-        <img src="https://via.placeholder.com/180x240.png?text=Book+2" alt="Book 2" />
-        <img src="https://via.placeholder.com/180x240.png?text=Art+1" alt="Art 1" />
-        <img src="https://via.placeholder.com/180x240.png?text=Art+2" alt="Art 2" />
-      </div>
-    </section>
-
-    <section id="socials">
-      <h2>🌐 Let's Connect</h2>
-      <div class="socials">
-        <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
-        <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 My Cozy Corner. Brewed with love and pastel pixels. ☕</p>
-  </footer>
+  <footer>
+    <p>© 2025 My Cozy Corner. Brewed with love and pastel pixels. </p>
+  </footer>
 </body>
 </html>
