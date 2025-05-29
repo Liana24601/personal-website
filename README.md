@@ -18,7 +18,7 @@ under construction rn
 
 #
 
-## Quick Tips:
+## Features:
 
 - under construction rn
 
