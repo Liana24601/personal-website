@@ -14,15 +14,17 @@
 
 # 🚀 Personal Website
 
-under construction rn
+Hey there! I'm finally making the personal/book review website of my dreams! With a soft purple color palette, and lots of info about me, this website is definitely one of my best, and one I'll keep editing as I read more books and listen to more music. Enjoy!
 
 #
 
-## Features:
+## In my website, I have...
 
-- under construction rn
-
----
+- Book reviews!!
+- My favorite albums and music
+- Cool quotes
+- Socials
+- And more!
 
 <div align="center">
 
