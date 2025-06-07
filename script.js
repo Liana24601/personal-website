@@ -8,24 +8,23 @@ const firebaseConfig = {
   appId: "1:118528871588:web:122c6c1bb6b6de20d8aa31"
 };
 
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
 
 function likeReview(bookId) {
-  const ref = db.ref('likes/' + bookId);
-  ref.transaction(current => (current || 0) + 1);
+  const likesRef = ref(db, 'likes/' + bookId);
+  runTransaction(likesRef, current => (current || 0) + 1);
 }
 
 function displayLikes(bookId, elementId) {
-  const ref = db.ref('likes/' + bookId);
-  ref.on('value', snapshot => {
+  const likesRef = ref(db, 'likes/' + bookId);
+  onValue(likesRef, snapshot => {
     const count = snapshot.val() || 0;
     const element = document.getElementById(elementId);
     if (element) element.innerText = count;
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  displayLikes('gatsby', 'like-count-gatsby');
-});
