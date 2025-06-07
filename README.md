@@ -12,7 +12,7 @@
 
 #
 
-# 🚀 Personal Website
+# 💜 Personal Website 💜
 
 Hey there! I'm finally making the personal/book review website of my dreams! With a soft purple color palette, and lots of info about me, this website is definitely one of my best, and one I'll keep editing as I read more books and listen to more music. Enjoy!
 
@@ -30,8 +30,7 @@ Hey there! I'm finally making the personal/book review website of my dreams! Wit
 
 #
 
-## 💝 Made with ❤️ using [GitHub README Generator](https://github.com/username/readme-generator)
+## Made with ❤️ using [GitHub README Generator](https://github.com/username/readme-generator)
 
-*Last updated: 5/28/2025*
 
 </div>
