@@ -1,8 +1,9 @@
 const firebaseConfig = {
   apiKey: "AIzaSyCA9n2NhJys_1F3BCcMot2uaKZBWPfvCY8",
   authDomain: "personal-website-a14c8.firebaseapp.com",
+  databaseURL: "https://personal-website-a14c8-default-rtdb.firebaseio.com",  // ✅ Add this line
   projectId: "personal-website-a14c8",
-  storageBucket: "personal-website-a14c8.firebasestorage.app",
+  storageBucket: "personal-website-a14c8.appspot.com",  // fixed typo (was missing ".com")
   messagingSenderId: "118528871588",
   appId: "1:118528871588:web:122c6c1bb6b6de20d8aa31"
 };
