@@ -11,13 +11,19 @@ firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
 function likeReview(bookId) {
-  const countRef = db.ref('likes/' + bookId);
-  countRef.transaction(current => (current || 0) + 1);
+  const ref = db.ref('likes/' + bookId);
+  ref.transaction(current => (current || 0) + 1);
 }
 
 function displayLikes(bookId, elementId) {
-  const countRef = db.ref('likes/' + bookId);
-  countRef.on('value', snapshot => {
-    document.getElementById(elementId).innerText = snapshot.val() || 0;
+  const ref = db.ref('likes/' + bookId);
+  ref.on('value', snapshot => {
+    const count = snapshot.val() || 0;
+    const element = document.getElementById(elementId);
+    if (element) element.innerText = count;
   });
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  displayLikes('gatsby', 'like-count-gatsby');
+});
