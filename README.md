@@ -18,6 +18,16 @@ Hey there! I'm finally making the personal/book review website of my dreams! Wit
 
 #
 
+# Take a sneak peek!
+
+<div align="center">
+  <img src="https://i.imgur.com/Nh2JIe6.png" 
+        style="width: 35%;">
+  </a>
+</div>
+
+#
+
 ## In my website, I have...
 
 - Book reviews!!
