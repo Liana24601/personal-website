@@ -22,7 +22,7 @@ Hey there! I'm finally making the personal/book review website of my dreams! Wit
 
 <div align="center">
   <img src="https://i.imgur.com/Nh2JIe6.png" 
-        style="width: 60%;">
+        style="width: 95%;">
   </a>
 </div>
 
